@@ -1,0 +1,12 @@
+Follow below procedure to get ObjIDs of lifs that are used for intercluster traffic
+
+In my environment the intercluster lifs have a suffix "ic02"
+From OCUM 
+
+## netapp_model ##
+SELECT objid,name
+FROM lif
+WHERE name LIKE '%_ic02%'
+
+SELECT distinct objid
+FROM summary_networklif
